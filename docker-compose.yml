@@ -22,5 +22,5 @@ services:
       build:
           context: ./api/docker
           dockerfile: php-fpm.docker
-          volumes:
+      volumes:
             - ./api:/var/www/api
