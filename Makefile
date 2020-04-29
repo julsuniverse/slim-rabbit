@@ -1,7 +1,12 @@
 up: docker-up
 
+docker-restart: docker-down docker-up
+
 docker-up:
 	docker-compose up --build -d
+
+docker-down:
+	docker-compose down
 
 frontend-install:
 	docker-compose exec frontend-nodejs npm install
