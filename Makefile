@@ -16,3 +16,6 @@ frontend-build:
 
 frontend-watch:
 	docker-compose exec frontend-nodejs npm run watch
+
+api-composer:
+	docker-compose exec api-php-cli composer install
