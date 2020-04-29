@@ -7,6 +7,6 @@ use Slim\App;
 
 return function (App $app) {
 
-    $app->get('/', Action\HomeAction::class);
+    $app->get('/', [Action\HomeAction::class, 'handle']);
 
 };
