@@ -19,3 +19,6 @@ frontend-watch:
 
 api-composer:
 	docker-compose exec api-php-cli composer install
+
+test:
+	docker-compose exec api-php-cli composer test
