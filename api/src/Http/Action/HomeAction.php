@@ -7,10 +7,11 @@ namespace Api\Http\Action;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 
-class HomeAction
+class HomeAction implements RequestHandlerInterface
 {
-    public function __invoke(ServerRequestInterface $request): ResponseInterface
+    public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $data = [
             'name' => 'App API',
